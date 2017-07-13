@@ -45,7 +45,7 @@ Custom property | Description | Default
 			.header {
 				min-height: 48px;
 				color: var(--primary-text-color);
-				@apply --layout-center-center;
+				@apply --layout-center;
 				@apply --layout-horizontal;
 				@apply --paper-font-subhead;
 				@apply --paper-collapse-item-header;
@@ -71,6 +71,11 @@ Custom property | Description | Default
 				@apply --paper-font-body1;
 				@apply --paper-collapse-item-content;
 			}
+            .toogle{
+                position:absolute;
+                right:0px;
+            }
+
 		</style>
 
 		<paper-item>
@@ -81,7 +86,9 @@ Custom property | Description | Default
 					</template>
 					<!-- Polymer's capitalization from hyphens converts `inner-h-t-m-l` to
 						`innerHTML`, and then sets `header` as it's property value -->
-					<div class="html" inner-h-t-m-l="[[header]]"></div>
+
+					<!--<div class="html" inner-h-t-m-l="[[header]]"></div>-->
+                    <slot class="html" name="header"></slot>
 					<paper-icon-button class="toogle" icon="[[_toggleIcon]]"></paper-icon-button>
 				</div>
 				<iron-collapse class="content" opened="{{opened}}">

@@ -20,6 +20,13 @@ To use this element:
 ```
 -->
 ```html
+<paper-collapse-item icon="icons:favorite" header="Item 1" opened>
+    Lots of very interesting content.
+</paper-collapse-item>
+```
+Or You can use slot:
+
+```html
 <paper-collapse-item icon="icons:favorite" opened>
     <div slot="header">
 	    Everything what you want in header.

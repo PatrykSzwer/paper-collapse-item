@@ -84,6 +84,9 @@ Custom property | Description | Default
 					<template is="dom-if" if="[[_or(icon, src)]]">
 						<iron-icon class="icon" src="[[src]]" icon="[[icon]]"></iron-icon>
 					</template>
+					<template is="dom-if" if="[[header]]">
+						<div class="html" inner-h-t-m-l="[[header]]"></div>
+					</template>
 					<slot class="html" name="header"></slot>
 					<paper-icon-button class="toggle" icon="[[_toggleIcon]]"></paper-icon-button>
 				</div>
